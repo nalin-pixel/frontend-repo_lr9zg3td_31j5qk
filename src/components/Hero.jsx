@@ -4,12 +4,20 @@ import Spline from '@splinetool/react-spline';
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden">
-      <div className="absolute inset-0">
-        <Spline scene="https://prod.spline.design/6sIHk2M0oYh4i7cO/scene.splinecode" style={{ width: '100%', height: '100%' }} />
+    <section className="relative overflow-hidden" style={{ minHeight: '80vh' }}>
+      {/* 3D Scene Layer */}
+      <div className="absolute inset-0 h-full w-full">
+        <Spline
+          scene="https://prod.spline.design/6sIHk2M0oYh4i7cO/scene.splinecode"
+          style={{ width: '100%', height: '100%' }}
+        />
       </div>
-      <div className="relative pointer-events-none">
-        <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-white/60 to-white dark:from-slate-900/70 dark:via-slate-900/60 dark:to-slate-900 pointer-events-none" />
+
+      {/* Gradient overlay to improve text contrast; does not block interactions */}
+      <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-white/60 to-white dark:from-slate-900/70 dark:via-slate-900/60 dark:to-slate-900 pointer-events-none" />
+
+      {/* Content */}
+      <div className="relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16 md:pt-32 md:pb-24">
           <div className="pointer-events-auto">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 text-indigo-700 ring-1 ring-indigo-200 mb-6">
