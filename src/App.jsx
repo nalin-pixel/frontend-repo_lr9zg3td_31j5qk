@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './components/Navbar.jsx';
 import Hero from './components/Hero.jsx';
 import CoursesPreview from './components/CoursesPreview.jsx';
+import Highlights from './components/Highlights.jsx';
 import Footer from './components/Footer.jsx';
 
 export default function App() {
@@ -10,6 +11,7 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
+        <Highlights />
         <CoursesPreview />
       </main>
       <Footer />
